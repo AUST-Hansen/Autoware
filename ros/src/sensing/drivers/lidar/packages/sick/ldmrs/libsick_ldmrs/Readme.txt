@@ -1,3 +1,23 @@
+Autoware's libsick_ldmrs Subtree
+This directory is part of a subtree fetched from https://github.com/CPFL/libsick_ldmrs on the Autoware branch, a fork from the original https://github.com/SICKAG/libsick_ldmrs
+
+This repo adds specific functions for Autoware. If you need to modify any file inside this folder structure, please use the following commands to either push or fetch changes from the subtree. All the commands written here will suppose you're in the root of Autoware path.
+
+Pulling in commits from the repository subtree
+
+Bring latest commits from https://github.com/CPFL/libsick_ldmrs
+
+git subtree pull --prefix ros/src/sensing/drivers/lidar/packages/sick/ldmrs/libsick_ldmrs https://github.com/CPFL/libsick_ldmrs Autoware --squash
+
+Pushing changes to the repository subtree
+
+If you made any modification to the subtree you are encouraged to commit and publish your changes to the fork. You can do with the following command.
+
+git subtree push --prefix ros/src/sensing/drivers/lidar/packages/sick/ldmrs/libsick_ldmrs https://github.com/CPFL/libsick_ldmrs Autoware
+
+Original README below
+
+
 ***
 *** LDMRS Example
 ***
