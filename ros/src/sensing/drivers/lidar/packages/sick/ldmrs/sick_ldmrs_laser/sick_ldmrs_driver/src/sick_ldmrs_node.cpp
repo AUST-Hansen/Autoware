@@ -40,17 +40,17 @@
 
 #include "sick_ldmrs_driver/sick_ldmrs_node.hpp"
 
-#include <sick_ldmrs/datatypes/EvalCaseResults.hpp>
-#include <sick_ldmrs/datatypes/EvalCases.hpp>
-#include <sick_ldmrs/datatypes/Fields.hpp>
-#include <sick_ldmrs/datatypes/Measurement.hpp>
-#include <sick_ldmrs/datatypes/Msg.hpp>
-#include <sick_ldmrs/datatypes/Scan.hpp>
+#include <datatypes/EvalCaseResults.hpp>
+#include <datatypes/EvalCases.hpp>
+#include <datatypes/Fields.hpp>
+#include <datatypes/Measurement.hpp>
+#include <datatypes/Msg.hpp>
+#include <datatypes/Scan.hpp>
 
-#include <sick_ldmrs/devices/LD_MRS.hpp>
+#include <devices/LD_MRS.hpp>
 
-#include <sick_ldmrs/tools/errorhandler.hpp>
-#include <sick_ldmrs/tools/toolbox.hpp>
+#include <tools/errorhandler.hpp>
+#include <tools/toolbox.hpp>
 
 #include <sick_ldmrs_msgs/ObjectArray.h>
 #include <tf/transform_datatypes.h>

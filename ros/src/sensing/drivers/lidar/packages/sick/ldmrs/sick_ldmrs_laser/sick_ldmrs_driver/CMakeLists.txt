@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 
+add_subdirectory(src/driver)
+
 find_package(Boost REQUIRED COMPONENTS system)
 
 find_package(SickLDMRS REQUIRED)
@@ -25,7 +27,10 @@ catkin_package(
     INCLUDE_DIRS include
     )
 
-include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(include 
+	src/driver/src
+	${catkin_INCLUDE_DIRS}
+	)
 
 add_executable(sick_ldmrs_node
     src/sick_ldmrs_node.cpp)

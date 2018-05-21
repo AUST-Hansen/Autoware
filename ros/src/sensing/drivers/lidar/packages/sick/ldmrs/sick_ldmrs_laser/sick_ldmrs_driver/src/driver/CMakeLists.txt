@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(libsick_ldmrs)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(LIBSICK_LDMRS)
 
 set(SICK_LDMRS_MAJOR_VERSION 0)
 set(SICK_LDMRS_MINOR_VERSION 1)
@@ -27,9 +27,6 @@ foreach(p LIB BIN INCLUDE CMAKE)
     set(${var} "${CMAKE_INSTALL_PREFIX}/${${var}}")
   endif()
 endforeach()
-
-find_package(catkin REQUIRED)
-catkin_package()
 
 # set up include-directories
 include_directories("${PROJECT_SOURCE_DIR}/include")

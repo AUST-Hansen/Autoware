@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <launch>
 
   <arg name="hostname" default="192.168.0.1" />
@@ -8,7 +7,7 @@
   <node name="sick_ldmrs_node" pkg="sick_ldmrs_driver" type="sick_ldmrs_node" output="screen">
     <!-- change frequency to 12.5 Hz so that the scanner outputs object tracking results -->
     <param name="scan_frequency" type="int" value="0" />
-    <param name="hostname" value="$(arg hostname)" />
+    <param name="hostname" type="string" value="$(arg hostname)" />
   </node>
 
   <!-- upload the robot_description URDF (in this demo, the "robot" is only the LD-MRS) -->
@@ -41,3 +40,4 @@
   <!-- publish TF -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
 </launch>
+

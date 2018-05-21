@@ -52,9 +52,9 @@
 #include <dynamic_reconfigure/server.h>
 #include <sick_ldmrs_driver/SickLDMRSDriverConfig.h>
 
-#include <sick_ldmrs/manager.hpp>
-#include <sick_ldmrs/application/BasicApplication.hpp>
-#include <sick_ldmrs/datatypes/Object.hpp>
+#include <manager.hpp>
+#include <application/BasicApplication.hpp>
+#include <datatypes/Object.hpp>
 
 
 namespace sick_ldmrs_driver
