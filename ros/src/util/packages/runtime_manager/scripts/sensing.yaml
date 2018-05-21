@@ -210,7 +210,7 @@ subs :
       - name : Sick LD-MRS (IBEO Lux)
         desc : Initializes the Sick LD-MRS driver (identical to IBEO Lux)
         probe:
-        run  : roslaunch sick_ldmrs_tools sick_ldmrs_demo.launch
+        run  : roslaunch sick_ldmrs_driver sick_ldmrs.launch
         param: sick_ldmrs
 
   - name : Other Sensors
@@ -393,6 +393,17 @@ params :
         dash : ''
         delim: ':='
         must : True
+    - name  : scan_frequency
+      label : Frequency
+      desc  : 0-12.5 Hz, 1-25.0 Hz, 2-50.0 Hz
+      kind  : menu
+      choices : [ '0', '1', '2' ]
+      choices_type : str
+      v     : '0'
+      cmd_param :
+        dash : ''
+        delim: ':='
+        must : true
 
   - name  : grasshopper3_params
     vars  :
