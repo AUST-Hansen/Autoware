@@ -204,13 +204,14 @@ subs :
       - name : Sick LMS511
         desc : Initializes the Sick LMS511 driver
         probe:
-        run  : roslaunch sick_driver lms511.launch
+        run  : roslaunch sick_lms5xx lms511.launch
         param: sick_lms511
 
-      - name : IBEO 8L Single
-        desc : IBEO 8L Single desc sample
+      - name : Sick LD-MRS (IBEO Lux)
+        desc : Initializes the Sick LD-MRS driver (identical to IBEO Lux)
         probe:
-        run  :
+        run  : roslaunch sick_ldmrs_tools sick_ldmrs_demo.launch
+        param: sick_ldmrs
 
   - name : Other Sensors
     desc : Other Sensors desc sample
@@ -376,6 +377,18 @@ params :
       desc  : IP address of SICK LMS511
       kind  : str
       v     : 192.168.1.1
+      cmd_param :
+        dash : ''
+        delim: ':='
+        must : True
+
+  - name  : sick_ldmrs
+    vars  :
+    - name  : hostname
+      label : IP
+      desc  : IP address of SICK LD-MRS
+      kind  : str
+      v     : 192.168.0.1
       cmd_param :
         dash : ''
         delim: ':='
